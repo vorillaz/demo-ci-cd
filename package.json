@@ -43,5 +43,11 @@
     "package.json": [
       "finepack"
     ]
-  }
+  },
+  "contributors": [
+    {
+      "name": "vorillaz",
+      "email": "theodorevorillas@gmail.com"
+    }
+  ]
 }
