@@ -2,6 +2,7 @@
   "name": "demo-ci-cd-module",
   "version": "0.0.1",
   "scripts": {
+    "coverage": "exit 0",
     "test": "ava",
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "postrelease": "npm run release:tags && npm run release:github && ci-publish",
@@ -16,9 +17,9 @@
     "lodash": "^4.17.20"
   },
   "devDependencies": {
-    "ava": "^3.12.1",
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
+    "ava": "^3.12.1",
     "ci-publish": "latest",
     "conventional-github-releaser": "latest",
     "finepack": "latest",
@@ -26,6 +27,7 @@
     "husky": "latest",
     "lint-staged": "latest",
     "npm-check-updates": "latest",
+    "nyc": "^15.1.0",
     "standard-version": "latest"
   },
   "commitlint": {
