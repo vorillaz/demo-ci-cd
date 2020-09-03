@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/vorillaz/demo-ci-cd/compare/v0.0.3...v0.0.4) (2020-09-03)
+
+
+### Features
+
+* yarn ([9ef379a](https://github.com/vorillaz/demo-ci-cd/commit/9ef379a42bb2b7a1b4557921734040dc00c0e008))
+
 ### [0.0.3](https://github.com/vorillaz/demo-ci-cd/compare/v0.0.2...v0.0.3) (2020-09-03)
 
 

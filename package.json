@@ -1,6 +1,6 @@
 {
   "name": "demo-ci-cd-module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "coverage": "exit 0",
     "test": "ava",
