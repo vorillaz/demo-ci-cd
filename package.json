@@ -1,6 +1,6 @@
 {
   "name": "demo-ci-cd-module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "test": "ava",
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
