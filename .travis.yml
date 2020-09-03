@@ -1,11 +1,14 @@
+os: linux
+cache:
+  yarn: true
+  directories:
+    - ~/.cache
+    - node_modules
+
 language: node_js
+node_js: 14
 
-node_js:
-  - lts/*
-  - node
-
-after_success: yarn coverage
-
+after_success: yarn run coverage
 stages:
   - Test
   - name: Release
@@ -14,8 +17,8 @@ stages:
 jobs:
   include:
     - stage: Release
-      node_js: lts/*
-      install: yarn install --no-lockfile
+      node_js: 14
+      install: yarn install --frozen-lockfiles
       before_deploy:
         - git config user.email ${GITHUB_EMAIL:-"travis@travis-ci.org"}
         - git config user.name ${GITHUB_USER:-"Travis CI"}
@@ -24,6 +27,6 @@ jobs:
       deploy:
         skip_cleanup: true
         provider: script
-        script: yarn release
+        script: yarn run release
         on:
           branch: master
