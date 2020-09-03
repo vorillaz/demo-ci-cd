@@ -4,7 +4,7 @@ node_js:
   - lts/*
   - node
 
-after_success: npm run coverage
+after_success: yarn coverage
 
 stages:
   - Test
@@ -15,7 +15,7 @@ jobs:
   include:
     - stage: Release
       node_js: lts/*
-      install: npm install --no-package-lock
+      install: yarn install --no-lockfile
       before_deploy:
         - git config user.email ${GITHUB_EMAIL:-"travis@travis-ci.org"}
         - git config user.name ${GITHUB_USER:-"Travis CI"}
@@ -24,6 +24,6 @@ jobs:
       deploy:
         skip_cleanup: true
         provider: script
-        script: npm run release
+        script: yarn release
         on:
           branch: master
