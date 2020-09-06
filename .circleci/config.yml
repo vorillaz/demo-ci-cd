@@ -16,9 +16,28 @@ jobs:
       - run:
           name: Ava Tests
           command: yarn test
+  changeset:
+    docker:
+      - image: circleci/node:14
+    working_directory: ~/repo
+    branches:
+      only:
+        - master
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v4-dependencies-{{ checksum "yarn.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v4-dependencies-
+      - run: yarn install --pure-lockfile
+      - run:
+          name: Changeset
+          command: yarn changeset
 
 workflows:
   version: 2
   build-and-test:
     jobs:
       - test
+      - changeset

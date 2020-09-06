@@ -2,9 +2,14 @@
 	"name": "demo-ci-cd-module",
 	"version": "0.0.3",
 	"scripts": {
-		"test": "ava"
+		"test": "ava",
+		"changeset": "changeset",
+		"version-packages": "changeset version",
+		"release": "yarn build && changeset publish"
 	},
 	"dependencies": {
+		"@changesets/changelog-github": "^0.1.0",
+		"@changesets/cli": "^2.3.0",
 		"lodash": "^4.17.20"
 	},
 	"devDependencies": {
