@@ -1,5 +1,5 @@
 {
-  "name": "demo-ci-cd-module",
+	"name": "demo-ci-cd-module",
 	"version": "0.0.3",
 	"scripts": {
 		"test": "ava"
@@ -23,8 +23,7 @@
 	},
 	"lint-staged": {
 		"*.{js,md}": [
-			"prettier --write",
-			"git add"
+			"prettier --write"
 		]
 	},
 	"contributors": [
