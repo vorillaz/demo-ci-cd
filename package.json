@@ -12,18 +12,20 @@
 		"@commitlint/config-conventional": "latest",
 		"ava": "^3.12.1",
 		"husky": "latest",
-		"lint-staged": "latest"
-	},
-	"commitlint": {
-		"extends": [
-			"@commitlint/config-conventional"
-		]
+		"lint-staged": "latest",
+		"prettier": "1.17.1"
 	},
 	"husky": {
 		"hooks": {
 			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
 			"pre-commit": "lint-staged"
 		}
+	},
+	"lint-staged": {
+		"*.{js,md}": [
+			"prettier --write",
+			"git add"
+		]
 	},
 	"contributors": [
 		{
