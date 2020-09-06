@@ -1,55 +1,34 @@
 {
   "name": "demo-ci-cd-module",
-  "version": "0.0.4",
-  "scripts": {
-    "coverage": "exit 0",
-    "test": "ava",
-    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
-    "postrelease": "npm run release:tags && npm run release:github && ci-publish",
-    "prerelease": "npm run update:check && npm run contributors",
-    "release:github": "conventional-github-releaser -p angular",
-    "release:tags": "git push --follow-tags origin HEAD:master",
-    "release": "standard-version -a",
-    "update:check": "ncu -- --error-level 2",
-    "update": "ncu -u"
-  },
-  "dependencies": {
-    "lodash": "^4.17.20"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "latest",
-    "@commitlint/config-conventional": "latest",
-    "ava": "^3.12.1",
-    "ci-publish": "latest",
-    "conventional-github-releaser": "latest",
-    "finepack": "latest",
-    "git-authors-cli": "latest",
-    "husky": "latest",
-    "lint-staged": "latest",
-    "npm-check-updates": "latest",
-    "nyc": "^15.1.0",
-    "standard-version": "latest"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "package.json": [
-      "finepack"
-    ]
-  },
-  "contributors": [
-    {
-      "name": "vorillaz",
-      "email": "theodorevorillas@gmail.com"
-    }
-  ]
+	"version": "0.0.3",
+	"scripts": {
+		"test": "ava"
+	},
+	"dependencies": {
+		"lodash": "^4.17.20"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "latest",
+		"@commitlint/config-conventional": "latest",
+		"ava": "^3.12.1",
+		"husky": "latest",
+		"lint-staged": "latest"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+			"pre-commit": "lint-staged"
+		}
+	},
+	"contributors": [
+		{
+			"name": "vorillaz",
+			"email": "theodorevorillas@gmail.com"
+		}
+	]
 }
