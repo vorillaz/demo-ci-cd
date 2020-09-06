@@ -20,9 +20,6 @@ jobs:
     docker:
       - image: circleci/node:14
     working_directory: ~/repo
-    branches:
-      only:
-        - master
     steps:
       - checkout
       - restore_cache:
@@ -37,7 +34,10 @@ jobs:
 
 workflows:
   version: 2
-  build-and-test:
+  test-and-publish:
     jobs:
       - test
-      - changeset
+      - changeset:
+        filters:
+          branches:
+            only: master
