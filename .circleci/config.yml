@@ -31,8 +31,13 @@ jobs:
       - run:
           name: Git setup
           command: |
-            GIT_COMMIT_MSG=$(git log --oneline -n 1 HEAD)
-            echo $GIT_COMMIT_MSG
+            LATEST_COMMIT=$(git log --oneline -n 1 HEAD)
+            if [ "$LATEST_COMMIT" !~ /(release|no-release)/ ]; then
+                echo "This is a release, kill this one!"
+                circleci step halt
+            else
+              echo "Prepare a new release"
+            fi
 
       # - run:
       #     name: NPM setup
