@@ -32,7 +32,7 @@ jobs:
           command: |
             git config user.email "circleci-bot@circleci.com"
             git config user.name "Release Bot 🤖"
-            git remote set-url origin https://${GH_TOKEN}@github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git
+            git remote set-url origin https://${GITHUB_TOKEN}@github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git
       - checkout
       - run:
           name: NPM setup
