@@ -31,8 +31,8 @@ jobs:
       - run:
           name: Git setup
           command: |
-            $GIT_COMMIT_DESC=git log --format=oneline -n 1 $CIRCLE_SHA1
-            echo $GIT_COMMIT_DESC;
+            $GIT_COMMIT_DESC=$(git log --format=oneline -n 1 $CIRCLE_SHA1)
+            echo $GIT_COMMIT_DESC
 
       # - run:
       #     name: NPM setup
