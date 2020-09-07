@@ -29,25 +29,30 @@ jobs:
             git config user.name "Release Bot 🤖"
             git remote set-url origin https://${GITHUB_TOKEN}@github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git
       - run:
-          name: NPM setup
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-
-      - restore_cache:
-          keys:
-            - v4-dependencies-{{ checksum "yarn.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v4-dependencies-
-      - run: yarn install --pure-lockfile
-      - run:
-          name: Add changelog and stuff
-          command: npx standard-version
-      - run:
-          name: Add tags
-          command: git push --follow-tags origin master
-      - run:
-          name: Publish to NPM through Yarn
+          name: Git setup
           command: |
-            PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && yarn publish --new-version $PACKAGE_VERSION
+            $GIT_COMMIT_DESC=git log --format=oneline -n 1 $CIRCLE_SHA1
+            echo $GIT_COMMIT_DESC;
+
+      # - run:
+      #     name: NPM setup
+      #     command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+      # - restore_cache:
+      #     keys:
+      #       - v4-dependencies-{{ checksum "yarn.lock" }}
+      #       # fallback to using the latest cache if no exact match is found
+      #       - v4-dependencies-
+      # - run: yarn install --pure-lockfile
+      # - run:
+      #     name: Add changelog and stuff
+      #     command: npx standard-version -a
+      # - run:
+      #     name: Add tags
+      #     command: git push --follow-tags origin master
+      # - run:
+      #     name: Publish to NPM through Yarn
+      #     command: |
+      #       PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && yarn publish --new-version $PACKAGE_VERSION
 
 workflows:
   version: 2
