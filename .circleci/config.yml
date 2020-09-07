@@ -16,7 +16,7 @@ jobs:
       - run:
           name: Ava Tests
           command: yarn test
-  changeset:
+  release:
     docker:
       - image: circleci/node:14
     working_directory: ~/repo
@@ -29,15 +29,21 @@ jobs:
             - v4-dependencies-
       - run: yarn install --pure-lockfile
       - run:
-          name: Changeset
-          command: yarn changeset
+          name: Add changelog and stuff
+          command: npx standard-version
+      - run:
+          name: Add tags
+          command: git push --follow-tags origin master
+      - run:
+          name: Publish to NPM through Yarn
+          command: "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && yarn publish yarn publish --new-version $PACKAGE_VERSION;"
 
 workflows:
   version: 2
   test-and-publish:
     jobs:
       - test
-      - changeset:
+      - release:
         filters:
           branches:
             only: master

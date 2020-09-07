@@ -1,42 +1,42 @@
 {
-	"name": "demo-ci-cd-module",
-	"version": "0.0.5",
-	"scripts": {
-		"test": "ava",
-		"changeset": "changeset",
-		"version-packages": "changeset version",
-		"release": "changeset publish --access public"
-	},
-	"dependencies": {
-		"@changesets/changelog-github": "^0.1.0",
-		"@changesets/cli": "^2.3.0",
-		"ip-address": "^6.3.0",
-		"lodash": "^4.17.20"
-	},
-	"devDependencies": {
-		"@commitlint/cli": "latest",
-		"@commitlint/config-conventional": "latest",
-		"ava": "^3.12.1",
-		"husky": "latest",
-		"lint-staged": "latest",
-		"prettier": "1.17.1",
-		"shelljs": "^0.8.4"
-	},
-	"husky": {
-		"hooks": {
-			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*.{js,md}": [
-			"prettier --write"
-		]
-	},
-	"contributors": [
-		{
-			"name": "vorillaz",
-			"email": "theodorevorillas@gmail.com"
-		}
-	]
+  "name": "demo-ci-cd-module",
+  "version": "0.0.5",
+  "scripts": {
+    "test": "ava",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish --access public"
+  },
+  "dependencies": {
+    "@changesets/changelog-github": "^0.1.0",
+    "@changesets/cli": "^2.3.0",
+    "ip-address": "^6.3.0",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "ava": "^3.12.1",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "prettier": "1.17.1",
+    "shelljs": "^0.8.4"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md}": [
+      "prettier --write"
+    ]
+  },
+  "contributors": [
+    {
+      "name": "vorillaz",
+      "email": "theodorevorillas@gmail.com"
+    }
+  ]
 }
