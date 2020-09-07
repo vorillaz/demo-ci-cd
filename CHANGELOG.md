@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/vorillaz/demo-ci-cd/compare/v0.0.10...v0.0.11) (2020-09-07)
+
+
+### Bug Fixes
+
+* this is not cool ([f6f79d8](https://github.com/vorillaz/demo-ci-cd/commit/f6f79d84add06428cfe6c74c787b113fd0320794))
+
 ### [0.0.10](https://github.com/vorillaz/demo-ci-cd/compare/v0.0.9...v0.0.10) (2020-09-07)
 
 ### [0.0.9](https://github.com/vorillaz/demo-ci-cd/compare/v0.0.8...v0.0.9) (2020-09-07)
