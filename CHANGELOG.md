@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/vorillaz/demo-ci-cd/compare/v0.0.4...v0.0.6) (2020-09-07)
+
+
+### Features
+
+* check a new release ([8020423](https://github.com/vorillaz/demo-ci-cd/commit/8020423314765aba6cfd27f243c608aa09f9efe9))
+* new version ([3a95db3](https://github.com/vorillaz/demo-ci-cd/commit/3a95db335b25dbf1c804bd79695e0bd3f223d0e9))
+* new version circleci ([37a6d68](https://github.com/vorillaz/demo-ci-cd/commit/37a6d68db22203b5c64e2fd1cf0ebe70e7457759))
+
+
+### Bug Fixes
+
+* are we there yet? ([984bdd8](https://github.com/vorillaz/demo-ci-cd/commit/984bdd8d22d4bf781c893528d65cdbe17605c13f))
+* circleci ([d7b69ac](https://github.com/vorillaz/demo-ci-cd/commit/d7b69acd1aedb2a50a75506f23c7cbe565638283))
+* circleci ([085597f](https://github.com/vorillaz/demo-ci-cd/commit/085597ff4e3194d9c8792ca2b4e11b0220380fc7))
+
 ### [0.0.5](https://github.com/vorillaz/demo-ci-cd/compare/v0.0.4...v0.0.5) (2020-09-07)
 
 ### Bug Fixes
