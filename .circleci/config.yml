@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Git setup
           command: |
-            GIT_COMMIT_MSG=git log --format=oneline -n 1 $CIRCLE_SHA1
+            GIT_COMMIT_MSG=$(git log --oneline -n 1 HEAD)
             echo $GIT_COMMIT_MSG
 
       # - run:
