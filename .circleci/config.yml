@@ -47,7 +47,7 @@ jobs:
       - run:
           name: Publish to NPM through Yarn
           command: |
-            PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && yarn publish yarn publish --new-version $PACKAGE_VERSION;
+            PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && yarn publish --new-version $PACKAGE_VERSION
 
 workflows:
   version: 2
