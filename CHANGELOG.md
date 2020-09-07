@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/vorillaz/demo-ci-cd/compare/v0.0.11...v0.0.12) (2020-09-07)
+
+
+### Features
+
+* bash is not my superpower ([c24ac56](https://github.com/vorillaz/demo-ci-cd/commit/c24ac565f022939cbb78ac3b133509d7b77eeea8))
+* ready go ([8b17484](https://github.com/vorillaz/demo-ci-cd/commit/8b174844ccdd8bff91fb5406ec31ce2106f6706a))
+* yeap ([8f8b59c](https://github.com/vorillaz/demo-ci-cd/commit/8f8b59ce31844e7585275c30fc941f267629dfc4))
+* yuhu ([60b8894](https://github.com/vorillaz/demo-ci-cd/commit/60b88943f1dd8ba35e1bb70c31001980dbc094e4))
+
+
+### Bug Fixes
+
+* staging ([f2f758c](https://github.com/vorillaz/demo-ci-cd/commit/f2f758c3be617a23de46a2a4b63308d2b4134a24))
+* stale on bump ([9e7b032](https://github.com/vorillaz/demo-ci-cd/commit/9e7b0328607909e14bdd77fcdeb03cabce702c81))
+* upup ([7f2e67c](https://github.com/vorillaz/demo-ci-cd/commit/7f2e67c0a4baddda98abd8e3d4e6398fc8d55fa1))
+
 ### [0.0.11](https://github.com/vorillaz/demo-ci-cd/compare/v0.0.10...v0.0.11) (2020-09-07)
 
 
