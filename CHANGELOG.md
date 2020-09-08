@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/vorillaz/demo-ci-cd/compare/v0.0.12...v0.0.13) (2020-09-08)
+
+
+### Features
+
+* circle ci deps ([f1e2faa](https://github.com/vorillaz/demo-ci-cd/commit/f1e2faa4184d1a3c941e16aaf3ab6d1ae1e82f10))
+
+
+### Bug Fixes
+
+* merde ([6b013cb](https://github.com/vorillaz/demo-ci-cd/commit/6b013cb1063acf37a5e975f3df46683fb96192d7))
+
 ### [0.0.12](https://github.com/vorillaz/demo-ci-cd/compare/v0.0.11...v0.0.12) (2020-09-07)
 
 
